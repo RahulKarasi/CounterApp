@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import CounterDisplay from './CounterDisplay';
 
-class App extends Component {
+class CounterApp extends Component {
   constructor() {
     super();
     this.state = {counter: 0};
@@ -128,4 +128,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+export default CounterApp;

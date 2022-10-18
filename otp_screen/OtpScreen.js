@@ -104,6 +104,7 @@ export class OtpScreen extends Component {
                   this.state.num4 == '' &&
                   this.state.num3 != ''
                 ) {
+                  console.log(nativeEvent.key)
                   this.refs.num3ref.focus();
                   this.setState({num3: ''});
                 }
