@@ -3,7 +3,7 @@
  */
 
 import {AppRegistry} from 'react-native';
-import App from './App';
+import OtpScreen from './otp_screen/OtpScreen';
 import {name as appName} from './app.json';
 
 
