@@ -1,8 +1,6 @@
 # Assignment 1 - CounterApp
 For the following assignment, please refer to the folder 'counterApp'
 
-
-
 # Assignment 2 - Styling
 For the following assignment, please refer to the folder 'ott_screen'
   --------ScreenShot-
@@ -11,3 +9,6 @@ For the following assignment, please refer to the folder 'ott_screen'
 
 # Assignment 3 - React Native Components -1
 This assignment is in 'OtpScreen' branch
+
+# Assignment 4 - React-Native Navigations
+This assignment is in 'Assignment_17_Oct' branch
