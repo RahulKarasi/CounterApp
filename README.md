@@ -12,3 +12,6 @@ This assignment is in 'OtpScreen' branch
 
 # Assignment 4 - React-Native Navigations
 This assignment is in 'Assignment_17_Oct' branch
+
+# Assignment 5 - React Native Components -3
+This assignment is in 'MyntraScreen_19_Oct' branch
