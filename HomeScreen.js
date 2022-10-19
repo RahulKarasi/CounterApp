@@ -8,13 +8,15 @@ import React, {Component} from 'react';
 
 
 export default class HomeScreen extends Component {
+
   render() {
+    const { navigation } = this.props
     return (
       <View style={styles.parentContainer}>
         <TouchableOpacity
           style={styles.button}
-          onPress={() => this.props.navigation.navigate('CounterApp')}>
-          <Text style={styles.btnText}>Don't Click here</Text>
+          onPress={() => navigation.navigate('CounterApp')}>
+          <Text style={styles.btnText}>Assignment1</Text>
         </TouchableOpacity>
 
         <TouchableOpacity
