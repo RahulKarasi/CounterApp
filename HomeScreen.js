@@ -15,6 +15,16 @@ export default class HomeScreen extends Component {
       <View style={styles.parentContainer}>
         <TouchableOpacity
           style={styles.button}
+          onPress={() => navigation.navigate('WebView')}>
+          <Text style={styles.btnText}>WebView</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate('SwitchSlider')}>
+          <Text style={styles.btnText}>Switch Slider</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.button}
           onPress={() => navigation.navigate('CounterApp')}>
           <Text style={styles.btnText}>Assignment1</Text>
         </TouchableOpacity>
@@ -36,6 +46,12 @@ export default class HomeScreen extends Component {
           onPress={() => this.props.navigation.navigate('ColorViewer')}>
           <Text style={styles.btnText}>Assignment4</Text>
         </TouchableOpacity>
+
+        {/* <TouchableOpacity
+          style={styles.button}
+          onPress={() => this.props.navigation.navigate('WebView')}>
+          <Text style={styles.btnText}>Assignment5</Text>
+        </TouchableOpacity> */}
       </View>
     );
   }
@@ -51,7 +67,7 @@ const styles = StyleSheet.create({
     width: '65%',
     height:50,
     justifyContent:'center',
-    margin:35,
+    margin:20,
     borderRadius:30
   },
   btnText:{
