@@ -15,6 +15,11 @@ export default class HomeScreen extends Component {
       <View style={styles.parentContainer}>
         <TouchableOpacity
           style={styles.button}
+          onPress={() => navigation.navigate('SectionList')}>
+          <Text style={styles.btnText}>Section List</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.button}
           onPress={() => navigation.navigate('WebView')}>
           <Text style={styles.btnText}>WebView</Text>
         </TouchableOpacity>
@@ -46,12 +51,6 @@ export default class HomeScreen extends Component {
           onPress={() => this.props.navigation.navigate('ColorViewer')}>
           <Text style={styles.btnText}>Assignment4</Text>
         </TouchableOpacity>
-
-        {/* <TouchableOpacity
-          style={styles.button}
-          onPress={() => this.props.navigation.navigate('WebView')}>
-          <Text style={styles.btnText}>Assignment5</Text>
-        </TouchableOpacity> */}
       </View>
     );
   }

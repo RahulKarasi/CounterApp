@@ -9,6 +9,7 @@ import HomeScreen from './HomeScreen';
 import HexCode from './src/color_code_viewer/HexCode';
 import WebViewComp from './src/component2/WebViewComp';
 import SwitchSlider from './src/component2/SwitchSlider';
+import SectionLists from './src/component4SectionList/SectionLists';
 
 const Stack = createNativeStackNavigator();
 export class App extends Component {
@@ -17,6 +18,7 @@ export class App extends Component {
       <NavigationContainer>
         <Stack.Navigator >
           <Stack.Screen name="HomeScreen" component={HomeScreen} />
+          <Stack.Screen name="SectionList" component={SectionLists} />
           <Stack.Screen name="SwitchSlider" component={SwitchSlider} />
           <Stack.Screen name="WebView" component={WebViewComp} />
           <Stack.Screen name="CounterApp" component={CounterApp} />
