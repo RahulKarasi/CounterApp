@@ -3,6 +3,7 @@ import {
   View,
   StyleSheet,
   TouchableOpacity,
+  ScrollView
 } from 'react-native';
 import React, {Component} from 'react';
 
@@ -12,7 +13,13 @@ export default class HomeScreen extends Component {
   render() {
     const { navigation } = this.props
     return (
+      <ScrollView>
       <View style={styles.parentContainer}>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate('BackPressAlert')}>
+          <Text style={styles.btnText}>BackPress Alert</Text>
+        </TouchableOpacity>
         <TouchableOpacity
           style={styles.button}
           onPress={() => navigation.navigate('SectionList')}>
@@ -51,7 +58,10 @@ export default class HomeScreen extends Component {
           onPress={() => this.props.navigation.navigate('ColorViewer')}>
           <Text style={styles.btnText}>Assignment4</Text>
         </TouchableOpacity>
+
+        
       </View>
+      </ScrollView>
     );
   }
 }
@@ -63,15 +73,15 @@ const styles = StyleSheet.create({
   },
   button: {
     backgroundColor: '#3d004d',
-    width: '65%',
-    height:50,
+    width: '63%',
+    height:45,
     justifyContent:'center',
-    margin:20,
+    margin:18,
     borderRadius:30
   },
   btnText:{
     textAlign:'center',
     color:'white',
-    fontSize:17
+    fontSize:16
   }
 });
