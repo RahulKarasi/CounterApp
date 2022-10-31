@@ -11,6 +11,8 @@ import WebViewComp from './src/component2/WebViewComp';
 import SwitchSlider from './src/component2/SwitchSlider';
 import SectionLists from './src/component4SectionList/SectionLists';
 import BackPressAlert from './src/component5_clipBoard/BackPressAlert';
+import TextAnimation from './src/animation/TextAnimation';
+import AnimationTask2 from './src/animation/AnimationTask2';
 
 const Stack = createNativeStackNavigator();
 export class App extends Component {
@@ -19,6 +21,8 @@ export class App extends Component {
       <NavigationContainer>
         <Stack.Navigator >
           <Stack.Screen name="HomeScreen" component={HomeScreen} />
+          <Stack.Screen name="AnimationTask2" component={AnimationTask2} />
+          <Stack.Screen name="Animation" component={TextAnimation} />
           <Stack.Screen name="BackPressAlert" component={BackPressAlert} />
           <Stack.Screen name="SectionList" component={SectionLists} />
           <Stack.Screen name="SwitchSlider" component={SwitchSlider} />

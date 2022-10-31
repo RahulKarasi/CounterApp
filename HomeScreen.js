@@ -17,6 +17,16 @@ export default class HomeScreen extends Component {
       <View style={styles.parentContainer}>
         <TouchableOpacity
           style={styles.button}
+          onPress={() => navigation.navigate('Animation')}>
+          <Text style={styles.btnText}>Animation Task 1</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate('AnimationTask2')}>
+          <Text style={styles.btnText}>Animation Task 2</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.button}
           onPress={() => navigation.navigate('BackPressAlert')}>
           <Text style={styles.btnText}>BackPress Alert</Text>
         </TouchableOpacity>
