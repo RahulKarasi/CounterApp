@@ -33,6 +33,13 @@ const ReactHooks = () => {
     index,
   }));
 
+  const backToTop =()=>{
+    listRef.scrollToOffset({
+        offset:15,
+        animated:true
+    })
+  }
+
   
 
   return (
@@ -58,7 +65,7 @@ const ReactHooks = () => {
         onScroll={event => {
             var total = data.length * 400
             console.log(total,event.nativeEvent.contentOffset.y);
-            if(event.nativeEvent.contentOffset.y < 11777){
+            if(event.nativeEvent.contentOffset.y < 11477){
                 setShowBtn(false)
             }
           
@@ -75,7 +82,7 @@ const ReactHooks = () => {
         }}
       />
       {showBtn && (
-        <TouchableOpacity style={styles.topBtn}>
+        <TouchableOpacity onPress={backToTop} style={styles.topBtn}>
           <Text style={styles.topBtnTxt}>Back to top</Text>
         </TouchableOpacity>
       )}
