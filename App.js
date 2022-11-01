@@ -13,6 +13,8 @@ import SectionLists from './src/component4SectionList/SectionLists';
 import BackPressAlert from './src/component5_clipBoard/BackPressAlert';
 import TextAnimation from './src/animation/TextAnimation';
 import AnimationTask2 from './src/animation/AnimationTask2';
+import ReactHooks from './src/reactHooks/ReactHooks';
+// import FunctionalAssignment from './src/reactHooks/FunctionalAssignment';
 
 const Stack = createNativeStackNavigator();
 export class App extends Component {
@@ -20,7 +22,8 @@ export class App extends Component {
     return (
       <NavigationContainer>
         <Stack.Navigator >
-          <Stack.Screen name="HomeScreen" component={HomeScreen} />
+          {/* <Stack.Screen name="HomeScreen" component={HomeScreen} /> */}
+          <Stack.Screen name="hooks" component={ReactHooks} />
           <Stack.Screen name="AnimationTask2" component={AnimationTask2} />
           <Stack.Screen name="Animation" component={TextAnimation} />
           <Stack.Screen name="BackPressAlert" component={BackPressAlert} />
