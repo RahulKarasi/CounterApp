@@ -63,8 +63,6 @@ const ReactHooks = () => {
         // onEndReachedThreshold={0.4}
         getItemLayout={_getItemLayout}
         onScroll={event => {
-            var total = data.length * 400
-            console.log(total,event.nativeEvent.contentOffset.y);
             if(event.nativeEvent.contentOffset.y < 11477){
                 setShowBtn(false)
             }
