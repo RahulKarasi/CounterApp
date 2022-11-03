@@ -3,7 +3,8 @@ import {
   View,
   StyleSheet,
   TouchableOpacity,
-  ScrollView
+  ScrollView,
+  AsyncStorage
 } from 'react-native';
 import React, {Component} from 'react';
 
@@ -19,6 +20,19 @@ export default class HomeScreen extends Component {
           style={styles.button}
           onPress={() => navigation.navigate('Animation')}>
           <Text style={styles.btnText}>Animation Task 1</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => {
+            AsyncStorage.getItem('userInfo').then((data) => {
+              if(data){
+                navigation.navigate('AsyncHome')
+              } else{
+                navigation.navigate('AsyncStorageSignUp')
+              }
+            })
+          }}>
+          <Text style={styles.btnText}>Asyn Task</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.button}

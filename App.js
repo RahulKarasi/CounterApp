@@ -1,5 +1,6 @@
 // import {Text, View} from 'react-native';
 import React, {Component} from 'react';
+import {AsyncStorage} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import CounterApp from './src/counterApp/CounterApp';
@@ -14,15 +15,22 @@ import BackPressAlert from './src/component5_clipBoard/BackPressAlert';
 import TextAnimation from './src/animation/TextAnimation';
 import AnimationTask2 from './src/animation/AnimationTask2';
 import ReactHooks from './src/reactHooks/ReactHooks';
-// import FunctionalAssignment from './src/reactHooks/FunctionalAssignment';
+import AsyncStorageSignUp from './src/persistanceStore/AsyncStorageSignUp';
+import AsyncHome from './src/persistanceStore/AsyncHome';
 
 const Stack = createNativeStackNavigator();
 export class App extends Component {
+  constructor(props) {
+    super(props);
+  }
+
   render() {
     return (
       <NavigationContainer>
-        <Stack.Navigator >
-          {/* <Stack.Screen name="HomeScreen" component={HomeScreen} /> */}
+        <Stack.Navigator screenOptions={{headerShown: false}}>
+          <Stack.Screen name="HomeScreen" component={HomeScreen} />
+          <Stack.Screen name="AsyncStorageSignUp" component={AsyncStorageSignUp}/>
+          <Stack.Screen name="AsyncHome" component={AsyncHome} />
           <Stack.Screen name="hooks" component={ReactHooks} />
           <Stack.Screen name="AnimationTask2" component={AnimationTask2} />
           <Stack.Screen name="Animation" component={TextAnimation} />
