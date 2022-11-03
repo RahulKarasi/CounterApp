@@ -5,16 +5,13 @@ import {
   StyleSheet,
   AsyncStorage,
 } from 'react-native';
-import React, {useEffect} from 'react';
+import React from 'react';
 import Form from './Form';
 
 const AsyncStorageSignUp = ({navigation}) => {
   
 
-  useEffect(() => {
-    console.log('1');
-    // checkstorage();
-  }, []);
+  
   return (
 
     <ImageBackground

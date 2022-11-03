@@ -4,7 +4,8 @@ import {
   StyleSheet,
   TouchableOpacity,
   ScrollView,
-  AsyncStorage
+  AsyncStorage,
+  SafeAreaView
 } from 'react-native';
 import React, {Component} from 'react';
 
@@ -14,6 +15,7 @@ export default class HomeScreen extends Component {
   render() {
     const { navigation } = this.props
     return (
+      <SafeAreaView>
       <ScrollView>
       <View style={styles.parentContainer}>
         <TouchableOpacity
@@ -86,6 +88,7 @@ export default class HomeScreen extends Component {
         
       </View>
       </ScrollView>
+      </SafeAreaView>
     );
   }
 }
